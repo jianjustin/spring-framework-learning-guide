@@ -1,0 +1,1 @@
+INSERT INTO person(id,name,age,email) VALUES(1,'aaa',11,'bbb');
