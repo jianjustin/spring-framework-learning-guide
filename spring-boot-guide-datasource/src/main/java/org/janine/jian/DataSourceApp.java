@@ -25,11 +25,11 @@ public class DataSourceApp {
         SpringApplication.run(DataSourceApp.class,args);
     }
 
-    @Bean
-    @ConfigurationProperties("app.datasource")
-    public DataSource dataSource(){
+    //@Bean
+    //@ConfigurationProperties("app.datasource")
+    //public DataSource dataSource(){
         //return DataSourceBuilder.create().build();
-        return DataSourceBuilder.create().type(HikariDataSource.class).build();
-    }
+    //    return DataSourceBuilder.create().type(HikariDataSource.class).build();
+    //}
 
 }
