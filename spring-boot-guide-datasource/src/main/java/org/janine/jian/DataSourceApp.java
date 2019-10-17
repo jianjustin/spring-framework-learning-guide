@@ -1,5 +1,6 @@
 package org.janine.jian;
 
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -27,6 +28,8 @@ public class DataSourceApp {
     @Bean
     @ConfigurationProperties("app.datasource")
     public DataSource dataSource(){
-        return DataSourceBuilder.create().build();
+        //return DataSourceBuilder.create().build();
+        return DataSourceBuilder.create().type(HikariDataSource.class).build();
     }
+
 }
