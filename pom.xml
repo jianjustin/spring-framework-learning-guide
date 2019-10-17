@@ -17,6 +17,7 @@
     <modules>
         <module>quick-start</module>
         <module>Spring-Boot-Data-H2</module>
+        <module>spring-boot-guide-datasource</module>
     </modules>
 
     <build>
