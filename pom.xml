@@ -19,6 +19,7 @@
         <module>Spring-Boot-Data-H2</module>
         <module>spring-boot-guide-datasource</module>
         <module>spring-boot-logging</module>
+        <module>spring-boot-Jasypt</module>
     </modules>
 
     <build>

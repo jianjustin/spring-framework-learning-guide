@@ -1,0 +1,19 @@
+jasypt:
+  encryptor:
+    password: e9fbdb2d3b21
+
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ENC(Z5eGhE2Yv8jYS0+XMnwN3w==)
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+
