@@ -20,6 +20,7 @@
         <module>spring-boot-guide-datasource</module>
         <module>spring-boot-logging</module>
         <module>spring-boot-Jasypt</module>
+        <module>spring-boot-security-simple</module>
     </modules>
 
     <build>
