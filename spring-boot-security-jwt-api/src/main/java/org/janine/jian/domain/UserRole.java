@@ -10,7 +10,7 @@ public class UserRole {
     @Column(name = "PK_ID")
     public Long id;
     @Column(name = "MEMBER_USER_ID")
-    public String memberUserId;
+    public Long memberUserId;
     @Column(name = "MEMBER_ROLE_ID")
-    public String memberRoleId;
+    public Long memberRoleId;
 }
