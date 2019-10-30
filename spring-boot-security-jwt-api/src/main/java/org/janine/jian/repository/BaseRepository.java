@@ -18,7 +18,7 @@ public class BaseRepository<T> {
     public List<T> queryAllBySQL(String sql, List<Object> paramValueList,T clazz) {
         if(null==paramValueList)paramValueList = new ArrayList<>();
         Query query = this.entityManager.createNativeQuery(sql,clazz.getClass());
-        for(int i=0;i<paramValueList.size();i++)
+        for(int i = 0 ; i < paramValueList.size() ; i++)
             query.setParameter(i, paramValueList.get(i));
         List<T> list = query.getResultList();
         return list;

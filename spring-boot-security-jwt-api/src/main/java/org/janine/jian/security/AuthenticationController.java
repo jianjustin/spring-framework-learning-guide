@@ -26,7 +26,6 @@ public class AuthenticationController {
     public AuthenticationManagerBuilder authenticationManagerBuilder;
 
     @PostMapping("/auth/login")
-    @PreAuthorize("permitAll()")
     public ResponseEntity<String> authorize(@Valid @RequestBody User user) {
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.memberUserName, user.memberPassword);
         Authentication authentication = authenticationManagerBuilder.getObject().authenticate(authenticationToken);
