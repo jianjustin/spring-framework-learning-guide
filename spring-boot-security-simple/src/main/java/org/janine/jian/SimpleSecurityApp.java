@@ -4,30 +4,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @SpringBootApplication
 public class SimpleSecurityApp {
 
     @RequestMapping("/")
     public String root() {
-        return "redirect:/home";
+        return "a simple spring boot project with spring security";
     }
 
-    @RequestMapping("/home")
-    public String index() {
-        return "home";
-    }
-
-    @RequestMapping("/hello")
-    public String userIndex() {
-        return "hello";
-    }
-
-    @RequestMapping("/login")
-    public String login() {
-        return "login";
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(SimpleSecurityApp.class,args);

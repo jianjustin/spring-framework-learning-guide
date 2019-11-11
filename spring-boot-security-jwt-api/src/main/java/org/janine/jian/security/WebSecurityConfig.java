@@ -32,17 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) {
         web.ignoring()
                 .antMatchers(HttpMethod.OPTIONS, "/**")
-
-                // allow anonymous resource requests
-                .antMatchers(
-                        "/",
-                        "/*.html",
-                        "/favicon.ico",
-                        "/**/*.html",
-                        "/**/*.css",
-                        "/**/*.js",
-                        "/h2-console/**"
-                );
+                .antMatchers("/","/*.html","/favicon.ico", "/**/*.html", "/**/*.css", "/**/*.js", "/h2-console/**");
     }
 
     @Override

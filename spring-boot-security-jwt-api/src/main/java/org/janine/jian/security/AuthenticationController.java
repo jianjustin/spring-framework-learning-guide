@@ -39,5 +39,4 @@ public class AuthenticationController {
         return new ResponseEntity<>(jwt, httpHeaders, HttpStatus.OK);
     }
 
-
 }
