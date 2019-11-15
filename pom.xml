@@ -21,7 +21,9 @@
         <module>spring-boot-logging</module>
         <module>spring-boot-Jasypt</module>
         <module>spring-boot-security-simple</module>
-        <module>spring-boot-security-jwt-api</module>
+        <module>spring-boot-security-jwt</module>
+        <module>spring-boot-security-session</module>
+        <module>spring-boot-thymeleaf</module>
     </modules>
 
     <build>
