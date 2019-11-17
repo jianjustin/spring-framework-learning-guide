@@ -15,8 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.addFilterAt(new MyUsernamePasswordAuthenticationFilter(authenticationManagerBean()),UsernamePasswordAuthenticationFilter.class)
-                .authorizeRequests()
+        http.authorizeRequests()
                 .antMatchers("/login*").permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -27,9 +26,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login.html")
-                .and()
-                .httpBasic();//WebSecurityConfigurerAdapter默认配置
+                .logoutSuccessUrl("/login.html");//WebSecurityConfigurerAdapter默认配置
+
     }
+
+
 
 }
