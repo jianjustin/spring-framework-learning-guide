@@ -16,8 +16,18 @@ public class MyUserDetailsService implements UserDetailsService {
     private static List<UserDetails> users = new ArrayList<>();
 
     public MyUserDetailsService() {
-        users.add(User.withDefaultPasswordEncoder().username("root").password("root").roles("ADMIN").build());
-        users.add(User.withDefaultPasswordEncoder().username("jian").password("123456").roles("MEMBER").build());
+        users.add(
+                User.withDefaultPasswordEncoder()
+                        .username("root")
+                        .password("root")
+                        .roles("ADMIN")
+                        .build());
+        users.add(
+                User.withDefaultPasswordEncoder()
+                        .username("jian")
+                        .password("123456")
+                        .roles("MEMBER")
+                        .build());
     }
 
     @Override

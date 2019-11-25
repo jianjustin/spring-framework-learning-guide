@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SecurityJWTApp {
     @RequestMapping("/")
     public String home(){
-        return " a Rest API based SpringBoot and Spring Security OAuth2";
+        return " a Rest API based SpringBoot and Spring Security";
     }
 
     public static void main(String[] args) {

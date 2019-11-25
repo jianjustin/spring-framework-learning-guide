@@ -26,7 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login.html");//WebSecurityConfigurerAdapter默认配置
+                .logoutSuccessUrl("/login.html");
 
     }
 

@@ -24,6 +24,8 @@
         <module>spring-boot-security-jwt</module>
         <module>spring-boot-security-session</module>
         <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-security-httpbasic</module>
+        <module>spring-boot-security-oauth</module>
     </modules>
 
     <build>
