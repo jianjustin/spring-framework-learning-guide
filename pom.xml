@@ -27,6 +27,7 @@
         <module>spring-boot-security-httpbasic</module>
         <module>spring-boot-security-oauth</module>
         <module>spring-boot-security-oauth-github-client</module>
+        <module>spring-boot-security-oauth-authorization-server</module>
     </modules>
 
     <build>
