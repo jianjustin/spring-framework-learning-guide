@@ -25,9 +25,9 @@
         <module>spring-boot-security-session</module>
         <module>spring-boot-thymeleaf</module>
         <module>spring-boot-security-httpbasic</module>
-        <module>spring-boot-security-oauth</module>
         <module>spring-boot-security-oauth-github-client</module>
         <module>spring-boot-security-oauth-authorization-server</module>
+        <module>spring-security-oauth2-resource-server</module>
     </modules>
 
     <build>
