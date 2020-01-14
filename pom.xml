@@ -28,6 +28,7 @@
         <module>spring-boot-security-oauth-github-client</module>
         <module>spring-boot-security-oauth-authorization-server</module>
         <module>spring-security-oauth2-resource-server</module>
+        <module>spring-boot-mybatis</module>
     </modules>
 
     <build>
