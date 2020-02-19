@@ -10,7 +10,7 @@ public class BCryptPasswordEncoderUtils {
     }
 
     public static void main(String[] args) {
-        String password = "password";
+        String password = "admin";
         System.out.println(BCryptPasswordEncoderUtils.encode(password));
     }
 }

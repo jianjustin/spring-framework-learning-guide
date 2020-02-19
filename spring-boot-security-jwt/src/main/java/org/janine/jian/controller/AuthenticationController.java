@@ -1,6 +1,8 @@
-package org.janine.jian.security;
+package org.janine.jian.controller;
 
 import org.janine.jian.domain.User;
+import org.janine.jian.security.JWTFilter;
+import org.janine.jian.security.TokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -15,10 +17,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+
 import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api")
+@Api(tags = "auth")
 public class AuthenticationController {
     @Autowired
     public TokenProvider tokenProvider;

@@ -18,7 +18,6 @@
         <module>quick-start</module>
         <module>Spring-Boot-Data-H2</module>
         <module>spring-boot-guide-datasource</module>
-        <module>spring-boot-logging</module>
         <module>spring-boot-Jasypt</module>
         <module>spring-boot-security-simple</module>
         <module>spring-boot-security-jwt</module>

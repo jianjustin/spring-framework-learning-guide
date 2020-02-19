@@ -6,13 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import io.swagger.annotations.Api;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@Api(tags = "authority")
 public class AuthorityController {
     @Autowired
     AuthorityService authorityService;
+    
     @GetMapping("/authorities")
     @PreAuthorize("hasAuthority('Authority.getAllAuthorities')")
     public List<Authority> getAllAuthorities() {

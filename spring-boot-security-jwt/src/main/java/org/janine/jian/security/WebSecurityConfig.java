@@ -32,7 +32,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) {
         web.ignoring()
                 .antMatchers(HttpMethod.OPTIONS, "/**")
-                .antMatchers("/","/*.html","/favicon.ico", "/**/*.html", "/**/*.css", "/**/*.js", "/h2-console/**");
+                .antMatchers("/","/*.html","/favicon.ico", "/**/*.html", "/**/*.css", "/**/*.js", "/h2-console/**")
+                .antMatchers("/v2/api-docs","/swagger-resources/**","/swagger-ui.html","/webjars/**");
     }
 
     @Override
