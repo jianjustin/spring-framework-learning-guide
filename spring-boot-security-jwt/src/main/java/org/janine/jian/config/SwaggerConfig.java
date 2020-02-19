@@ -31,9 +31,11 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("org.janine.jian.controller"))
                 .paths(PathSelectors.any())
                 .build()
-                .securitySchemes(securitySchemes())
-                .securityContexts(securityContexts())
-                //.securitySchemes(new ArrayList<>(Arrays.asList(new ApiKey("Bearer %token", "Authorization", "Header"))))
+                .securitySchemes(Arrays.asList(new ApiKey("Authorization", "Authorization", "header")))
+                .securityContexts(Arrays.asList(SecurityContext.builder()
+                		.securityReferences(securityReferenceList())
+                		.forPaths(PathSelectors.any())
+                		.build()))
                 .tags(new Tag("auth", "用户认证"))
                 .tags(new Tag("authority", "授权模块"))
                 .tags(new Tag("role", "角色模块"))
@@ -45,21 +47,9 @@ public class SwaggerConfig {
                 .title("基于JWT构建RESTful API")
                 .build();
     }
-    
-	private List<ApiKey> securitySchemes() {
-		return new ArrayList<>(Arrays.asList(new ApiKey("Authorization", "Authorization", "header")));
-	}
 	
-	private List<SecurityContext> securityContexts() {
-		return new ArrayList<>(Arrays.asList(
-		    SecurityContext.builder()
-		            .securityReferences(defaultAuth())
-		            .forPaths(PathSelectors.regex("^(?!auth).*$"))
-		            .build())
-		);
-	}
-	List<SecurityReference> defaultAuth() {
-		AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
+	List<SecurityReference> securityReferenceList() {
+		AuthorizationScope authorizationScope = new AuthorizationScope("global", "access");
 		AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
 		authorizationScopes[0] = authorizationScope;
 		return new ArrayList<>(Arrays.asList(new SecurityReference("Authorization", authorizationScopes)));

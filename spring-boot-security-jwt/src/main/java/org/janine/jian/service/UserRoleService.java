@@ -1,8 +1,6 @@
 package org.janine.jian.service;
 
-import org.janine.jian.domain.Role;
 import org.janine.jian.domain.UserRole;
-import org.janine.jian.repository.RoleRepository;
 import org.janine.jian.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

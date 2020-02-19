@@ -4,7 +4,6 @@ import org.janine.jian.domain.*;
 import org.janine.jian.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -17,8 +16,6 @@ import java.util.stream.Collectors;
 
 @Component("userDetailsService")
 public class UserModelDetailsService implements UserDetailsService {
-    @Autowired
-    public BaseRepository baseRepository;
     @Autowired
     public UserRepository userRepository;
     @Autowired
@@ -52,7 +49,8 @@ public class UserModelDetailsService implements UserDetailsService {
     }
 
     class CustomGrantedAuthority implements GrantedAuthority {
-        private String authority;
+		private static final long serialVersionUID = 1L;
+		private String authority;
         public CustomGrantedAuthority(){}
         public CustomGrantedAuthority(String authority){
             this.authority = authority;
