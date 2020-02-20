@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.Api;
 
+import java.util.logging.Logger;
+
 import javax.validation.Valid;
 
 @RestController
@@ -36,6 +38,10 @@ public class AuthenticationController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         String jwt = tokenProvider.createToken(authentication);
+        
+        System.out.println("=========JWT Token Start==============");
+        System.out.println(jwt);
+        System.out.println("=========JWT Token End==============");
 
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(JWTFilter.AUTHORIZATION_HEADER, "Bearer " + jwt);
