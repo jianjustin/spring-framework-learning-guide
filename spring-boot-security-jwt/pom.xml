@@ -12,7 +12,7 @@
     <artifactId>spring-boot-security-jwt-api</artifactId>
 
     <properties>
-        <jjwt.version>0.11.0</jjwt.version>
+        <jjwt.version>0.9.1</jjwt.version>
         <swagger2.version>2.9.2</swagger2.version>
     </properties>
 
@@ -33,21 +33,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-api</artifactId>
-            <version>${jjwt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-impl</artifactId>
-            <version>${jjwt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-jackson</artifactId>
-            <version>${jjwt.version}</version>
-        </dependency>
+        
+        <!-- Json Web Token Support -->
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt</artifactId>
+		    <version>${jjwt.version}</version>
+		</dependency>
+        
         
         <!-- springboot swagger2 -->
         <dependency>
