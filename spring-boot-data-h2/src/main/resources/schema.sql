@@ -1,0 +1,7 @@
+
+CREATE TABLE IF NOT EXISTS `person`(
+  `id` INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(50),
+  `age` INTEGER,
+  `email` VARCHAR(255)
+);

@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import io.swagger.annotations.Api;
-
-import java.util.logging.Logger;
 
 import javax.validation.Valid;
 
@@ -48,5 +45,4 @@ public class AuthenticationController {
 
         return new ResponseEntity<>(jwt, httpHeaders, HttpStatus.OK);
     }
-
 }

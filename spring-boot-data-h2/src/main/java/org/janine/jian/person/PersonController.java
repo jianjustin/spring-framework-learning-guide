@@ -28,6 +28,6 @@ public class PersonController {
     @PostMapping("/persons")
     private int savePerson(@RequestBody Person person) {
         personService.saveOrUpdate(person);
-        return person.id;
+        return person.getId();
     }
 }
